@@ -44,7 +44,16 @@ const checkWinner = () =>{
         if(pos1Val === pos2Val && pos2Val === pos3Val){
             if(pos1Val != ''){
                 console.log("winner:", pos1Val);
+
+                boxes[pattern[0]].style.backgroundColor = "rgb(81, 210, 81)";
+                boxes[pattern[1]].style.backgroundColor = "rgb(81, 210, 81)";
+                boxes[pattern[2]].style.backgroundColor = "rgb(81, 210, 81)";
+
                 showWinner(pos1Val);
+
+                for(box of boxes){
+                    box.disabled = true;
+                }
             }
         }
 
@@ -56,6 +65,7 @@ resetBtn.addEventListener("click", () =>{
     for(box of boxes){
         box.innerText = "";
         box.disabled = false;
+        box.style.backgroundColor = "white";
     }
     winMessage.style.visibility = "hidden";
     turnX = true;
