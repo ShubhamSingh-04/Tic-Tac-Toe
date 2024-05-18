@@ -48,12 +48,12 @@ const checkWinner = () =>{
                 boxes[pattern[0]].style.backgroundColor = "rgb(81, 210, 81)";
                 boxes[pattern[1]].style.backgroundColor = "rgb(81, 210, 81)";
                 boxes[pattern[2]].style.backgroundColor = "rgb(81, 210, 81)";
-
-                showWinner(pos1Val);
-
+                
                 for(box of boxes){
                     box.disabled = true;
                 }
+                
+                showWinner(pos1Val);
             }
         }
 
